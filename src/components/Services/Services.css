@@ -1,0 +1,120 @@
+.section-pad {
+  padding: var(--spacing-xl) 0;
+}
+
+.section-header {
+  position: relative;
+  margin-bottom: var(--spacing-lg);
+  padding: 2.5rem 2rem;
+  border-radius: 28px;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(255, 250, 246, 0.92) 0%, rgba(255, 250, 246, 0.78) 45%, rgba(83, 56, 41, 0.22) 100%),
+    url('../../assets/pictures/6.jpg') center/cover no-repeat;
+  box-shadow: 0 20px 48px rgba(99, 66, 49, 0.1);
+}
+
+.section-header > * {
+  position: relative;
+  z-index: 1;
+}
+
+.section-header::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 28px;
+  pointer-events: none;
+}
+
+/* Services grid */
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.service-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--color-secondary);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform var(--transition);
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-accent);
+}
+
+.service-card:hover::before {
+  transform: scaleY(1);
+}
+
+.service-card__icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.service-card__title {
+  font-size: 1.35rem;
+  color: var(--color-primary);
+  font-family: var(--font-heading);
+}
+
+.service-card__desc {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  flex: 1;
+}
+
+.service-card__price {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-secondary);
+  letter-spacing: 0.03em;
+}
+
+.service-card__cta {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: color var(--transition), gap var(--transition);
+}
+
+.service-card__cta:hover {
+  color: var(--color-secondary);
+}
+
+@media (max-width: 768px) {
+  .section-header {
+    padding: 2rem 1.25rem;
+  }
+
+  .services__grid {
+    grid-template-columns: 1fr;
+  }
+}
