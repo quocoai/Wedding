@@ -15,7 +15,7 @@ const VIDEO_SHOWCASE = Object.entries(videoModules)
     return {
       id: index + 1,
       src,
-      title: `Dora Studio - Chúc Mừng Hạnh Phúc`,
+      title: `DORA Studio - Chúc Mừng Hạnh Phúc`,
       tone: fileName,
     };
   });
@@ -133,7 +133,7 @@ export default function Hero() {
           <div className="hero__copy">
             <span className="section-label hero__label">Video giới thiệu mẫu áo cưới</span>
             <p className="hero__subtitle">
-             Bộ sưu tập váy cưới của Dora được tuyển chọn từ những thiết kế tinh tế và hiện đại, 
+             Bộ sưu tập váy cưới của DORA được tuyển chọn từ những thiết kế tinh tế và hiện đại, 
              tôn lên vẻ đẹp thanh lịch của mỗi cô dâu. Từ phong cách công chúa lộng lẫy,
              tối giản sang trọng đến quyến rũ hiện đại, mỗi chiếc váy đều được chăm chút
                trong từng đường may để giúp bạn tự tin tỏa sáng và lưu giữ những khoảnh khắc hạnh phúc nhất của cuộc đời.
