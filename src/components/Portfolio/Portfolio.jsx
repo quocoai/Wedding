@@ -36,7 +36,7 @@ const buildCategoryPhotos = (modules, category, prefix, largeFirst = false) => O
     return {
       id: `${prefix}-${index + 1}`,
       category,
-      title: `${category} ${index + 1}`,
+      title: ``,
       cols: largeFirst && index === 0 ? 2 : 1,
       rows: largeFirst && index === 0 ? 2 : 1,
       src,
